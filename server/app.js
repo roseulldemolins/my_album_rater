@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", albumRouter);
-app.use("/track", trackRouter);
+app.use("/albums", albumRouter);
+app.use("/tracks", trackRouter);
 
 module.exports = app;
