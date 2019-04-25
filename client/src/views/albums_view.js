@@ -7,9 +7,9 @@ class AlbumsView{
   }
 
   bindEvents() {
-      PubSub.subscribe('Albums:album-data-loaded', (evt) => {
+      PubSub.subscribe('Albums:DB-data-loaded', (evt) => {
         const albums = evt.detail;
-        this.render(flowers);
+        this.render(albums);
       });
     }
 
@@ -26,28 +26,36 @@ class AlbumsView{
       this.container.innerHTML = '';
     }
 
-    // createCard(album) {
-    //   const meta = document.createElement('div');
-    //   meta.classList.add('meta');
-    //   meta.innerHTML = `<span>Sun: ${flower.sun}</span></br>
-    //                     <span>Water: ${flower.water}</span></br>
-    //                     <span>Soil: ${flower.soil}</span>`;
+    createCard(album) {
+      const meta = document.createElement('div');
+      meta.classList.add('meta');
+      meta.innerHTML = `<span>Title: ${albums.title}</span></br>
+                        <span>Artist: ${albums.artist}</span></br>
+                        <span>Year: ${albums.year}</span></br>
+                        <span>Genre: ${albums.genre}</span></br>
+                        <span>Label: ${albums.label}</span></br>
+                        <span>Cover: ${albums.cover}</span></br>`;
+
+
+
+
+
+
     //
     //
+      const header = document.createElement('div');
+      header.classList.add("header");
+      header.innerHTML = `${album.name}`;
     //
-    //   const header = document.createElement('div');
-    //   header.classList.add("header");
-    //   header.innerHTML = `${flower.name}`;
+      const content = document.createElement('div');
+      content.classList.add("content");
     //
-    //   const content = document.createElement('div');
-    //   content.classList.add("content");
+      const card = document.createElement('div');
+      card.classList.add("ui");
+      card.classList.add("card");
     //
-    //   const card = document.createElement('div');
-    //   card.classList.add("ui");
-    //   card.classList.add("card");
-    //
-    //   const buttons = document.createElement('div');
-    //   buttons.classList.add("ui", "buttons");
+      const buttons = document.createElement('div');
+      buttons.classList.add("ui", "buttons");
 
 
 
