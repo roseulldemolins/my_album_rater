@@ -102,7 +102,7 @@ class AlbumsView{
 
 
 
-
+      console.log(card);
       return card;
     }
 
