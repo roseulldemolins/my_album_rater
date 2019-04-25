@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="js/bundle.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/main.css"
     <title>My Album Rater</title>
   </head>
   <body>
@@ -14,7 +15,8 @@
       <h1>My Album Rater</h1>
 
     </div>
-    <form class="ui form">
+  <div class="add-form">
+    <form class="ui form" id="add-form">
       <div class="field">
         <label>Album Title</label>
         <input type="text" id="title" />
@@ -27,24 +29,16 @@
         <label>Year</label>
         <input type="number" id="title" />
       </div>
-      <div class="field">
+      <div class="genre-select">
         <label>Genre</label>
-        <div class="ui selection dropdown">
-          <input type="hidden" id="genre" />
-          <i class="dropdown icon"></i>
-          <div class="default text">Genre</div>
-          <div class="menu">
-            <div class="item" data-value="Rock">Rock</div>
-            <div class="item" data-value="Prog">Prog</div>
-            <div class="item" data-value="Pop">Pop</div>
-            <div class="item" data-value="Jazz">Jazz</div>
-            <div class="item" data-value="Folk">Folk</div>
-            <div class="item" data-value="Reggae">Reggae</div>
-            <div class="item" data-value="Avant-Garde Post-Grunge">Avant-Garde Post-Grunge</div>
-          </div>
-        </div>
+          <select>
+            <option value="Post-Avant-Garde Exo-Pop">Post-Avant-Garde Exo-Pop</option>
+            <option value="Post-Rock">Post-Rock</option>
+            <option value="LoFi Chillhop">LoFi Chillhop</option>
+          </select>
       </div>
     </form>
+  </div>
 
     <h4 class="ui horizontal divider header">
         <i class="circular headphones icon"></i>
