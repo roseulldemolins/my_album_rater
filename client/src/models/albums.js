@@ -47,7 +47,7 @@ class Album {
   }
 
   getAverage(array) {
-    total = 0;
+    let total = 0;
     array.forEach((element) => {
       total += element.rating;
     })
