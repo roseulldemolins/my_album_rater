@@ -4,7 +4,8 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
 
-var indexRouter = require("./routes/index");
+var albumRouter = require("./routes/albums");
+var trackRouter = require("./routes/tracks");
 
 var app = express();
 
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
+app.use("/", albumRouter);
+app.use("/track", trackRouter);
 
 module.exports = app;
