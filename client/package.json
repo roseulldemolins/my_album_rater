@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest",
     "build": "webpack -w",
-    "start": "node server.js",
     "start": "node ./bin/www",
     "server:dev": "nodemon ./bin/www"
   },
