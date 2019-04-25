@@ -73,10 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = new AlbumButton();
 
   addAlbum.bindEvents();
+  albumsView.bindEvents();
 
   button.revealButton();
 
   albumsView.render(object);
+
+  album.getData();
 
   $('.rating').rating({
     initialRating: 1,
