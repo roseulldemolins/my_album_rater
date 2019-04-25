@@ -8,4 +8,4 @@ class AddAlbum {
 
 }
 
-module.exports = addAlbum;
+module.exports = AddAlbum;

@@ -29,11 +29,11 @@ class AlbumsView{
     createCard(album) {
       const meta = document.createElement('div');
       meta.classList.add('meta');
-      meta.innerHTML = `<span>Artist: ${albums.artist}</span></br>
-                        <span>Year: ${albums.year}</span></br>
-                        <span>Genre: ${albums.genre}</span></br>
-                        <span>Label: ${albums.label}</span></br>
-                        <span>Cover: ${albums.cover}</span></br>`;
+      meta.innerHTML = `<span>Artist: ${album.artist}</span></br>
+                        <span>Year: ${album.year}</span></br>
+                        <span>Genre: ${album.genre}</span></br>
+                        <span>Label: ${album.label}</span></br>
+                        <span>Cover: ${album.cover}</span></br>`;
 
 
 
