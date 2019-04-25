@@ -1,5 +1,6 @@
 const Album = require('./models/albums.js');
-const AlbumsView = require('./views/albums_view.js')
+const AlbumsView = require('./views/albums_view.js');
+const AddAlbum = require('./views/add_album_view.js');
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("JavaScript Loaded");
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const album = new Album();
   const albumsView = new AlbumsView(container);
+  const addAlbum = new AddAlbum();
 
   albumsView.render(object);
 
