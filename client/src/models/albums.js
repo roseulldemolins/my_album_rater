@@ -10,7 +10,7 @@ class Album {
   }
 
   getData() {
-    const url = 'http://localhost:3000/albums';
+    const url = 'http://localhost:3000/albums/all';
     const request = new RequestHelper(url);
     request.get()
       .then((data) => {
@@ -47,6 +47,7 @@ class Album {
   }
 
   getAverage(array) {
+console.log(array);
     let total = 0;
     array.forEach((element) => {
       total += element.rating;

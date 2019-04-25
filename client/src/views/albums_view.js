@@ -44,7 +44,7 @@ class AlbumsView{
     //
       const header = document.createElement('div');
       header.classList.add("header");
-      header.innerHTML = `${album.title}`;
+      header.innerHTML = `${album.album_title}`;
     //
       const content = document.createElement('div');
       content.classList.add("content");
@@ -60,9 +60,14 @@ class AlbumsView{
       const rating = document.createElement('div');
       const average = new Album();
       rating.classList.add("ui", "star", "rating");
+      console.log(album);
       rating.dataset.rating = Math.floor(average.getAverage(album.tracks));
+      rating.innerHTML = `${rating.dataset.rating} out of 5 baby!`;
 
-
+      const tracks = document.createElement('div');
+      if (album.tracks.length > 0){
+        tracks.innerHTML = album.tracks[0].track_title
+      };
 
 
 
@@ -100,7 +105,7 @@ class AlbumsView{
       content.appendChild(meta);
       card.appendChild(content);
       content.appendChild(rating);
-
+      content.appendChild(tracks);
       //
       // buttons.appendChild(deleteButton);
       // buttons.appendChild(updateButton);

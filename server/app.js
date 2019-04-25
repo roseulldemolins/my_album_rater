@@ -3,12 +3,14 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
+var cors = require("cors");
 
 var albumRouter = require("./routes/albums");
 var trackRouter = require("./routes/tracks");
 
 var app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(logger("dev"));
 app.use(express.json());

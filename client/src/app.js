@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   button.revealButton();
 
-  albumsView.render(object);
+  // albumsView.render(object);
 
   album.getData();
 

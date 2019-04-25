@@ -11,7 +11,7 @@ class AddAlbum {
     this.element.addEventListener('submit', (evt) => {
       evt.preventDefault();
       const newEntry = {};
-      newEntry.title = evt.target.title.value;
+      newEntry.album_title = evt.target.title.value;
       newEntry.artist = evt.target.artist.value;
       newEntry.year = evt.target.year.value;
       newEntry.genre = evt.target.genre.value;
