@@ -56,8 +56,13 @@ class AlbumsView{
       const buttons = document.createElement('div');
       buttons.classList.add("ui", "buttons");
 
+
       const rating = document.createElement('div');
       rating.classList.add("ui", "star", "rating");
+      rating.dataset.rating = 3;
+
+
+
 
 
 
@@ -93,7 +98,8 @@ class AlbumsView{
       content.appendChild(header);
       content.appendChild(meta);
       card.appendChild(content);
-      card.appendChild(rating);
+      content.appendChild(rating);
+
       //
       // buttons.appendChild(deleteButton);
       // buttons.appendChild(updateButton);

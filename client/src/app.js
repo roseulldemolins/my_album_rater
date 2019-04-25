@@ -4,6 +4,7 @@ const AddAlbum = require('./views/add_album_view.js');
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("JavaScript Loaded");
+
   const container = document.querySelector('#albums-container');
   const addForm = document.querySelector('#add-form');
 
@@ -21,5 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const addAlbum = new AddAlbum(addForm);
 
   albumsView.render(object);
+
+  $('.rating').rating({
+    initialRating: 1,
+    maxRating: 5
+  });
 
 });
