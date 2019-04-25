@@ -29,8 +29,7 @@ class AlbumsView{
     createCard(album) {
       const meta = document.createElement('div');
       meta.classList.add('meta');
-      meta.innerHTML = `<span>Title: ${albums.title}</span></br>
-                        <span>Artist: ${albums.artist}</span></br>
+      meta.innerHTML = `<span>Artist: ${albums.artist}</span></br>
                         <span>Year: ${albums.year}</span></br>
                         <span>Genre: ${albums.genre}</span></br>
                         <span>Label: ${albums.label}</span></br>
@@ -45,7 +44,7 @@ class AlbumsView{
     //
       const header = document.createElement('div');
       header.classList.add("header");
-      header.innerHTML = `${album.name}`;
+      header.innerHTML = `${album.title}`;
     //
       const content = document.createElement('div');
       content.classList.add("content");
@@ -56,6 +55,11 @@ class AlbumsView{
     //
       const buttons = document.createElement('div');
       buttons.classList.add("ui", "buttons");
+
+      const rating = document.createElement('div');
+      rating.classList.add("ui", "star", "rating");
+
+
 
 
 
@@ -86,9 +90,10 @@ class AlbumsView{
       //
       //
       //
-      // content.appendChild(header);
-      // content.appendChild(meta);
-      // card.appendChild(content);
+      content.appendChild(header);
+      content.appendChild(meta);
+      card.appendChild(content);
+      card.appendChild(rating);
       //
       // buttons.appendChild(deleteButton);
       // buttons.appendChild(updateButton);
