@@ -32,8 +32,7 @@ class AlbumsView{
       meta.innerHTML = `<span>Artist: ${album.artist}</span></br>
                         <span>Year: ${album.year}</span></br>
                         <span>Genre: ${album.genre}</span></br>
-                        <span>Label: ${album.label}</span></br>
-                        <span>Cover: ${album.cover}</span></br>`;
+                        <span>Label: ${album.label}</span></br>`;
 
 
 
