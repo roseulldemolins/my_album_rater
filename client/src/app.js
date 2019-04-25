@@ -9,14 +9,63 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector('#albums-container');
   const addForm = document.querySelector('#add-form');
 
-  const object = [{
-    title: 'Origin of Symmetry',
-    artist: 'Evanescence',
-    year: 1990,
-    genre: "Rock in General",
-    label: 'codeclan',
-    cover: 'https://i.scdn.co/image/07c323340e03e25a8e5dd5b9a8ec72b69c50089d'
-  }]
+  const object = [
+    {
+      title: 'Origin of Symmetry',
+      artist: 'Evanescence',
+      year: 1990,
+      genre: "Rock in General",
+      label: 'codeclan',
+      tracks: [
+        {
+          rating: 4
+        },
+        {
+          rating: 2
+        },
+        {
+          rating: 5
+        }
+      ]
+
+    },
+    {
+      title: 'Fallen',
+      artist: 'Franz Ferdinand',
+      year: 2112,
+      genre: "Hyper Gaming EDM",
+      label: 'codeclan',
+      tracks: [
+        {
+          rating: 5
+        },
+        {
+          rating: 5
+        },
+        {
+          rating: 5
+        }
+      ]
+    },
+    {
+      title: 'Skies of Xanadu',
+      artist: 'Rush',
+      year: 2002,
+      genre: "Extreme Prog Metal",
+      label: 'codeclan',
+      tracks: [
+        {
+          rating: 2
+        },
+        {
+          rating: 2
+        },
+        {
+          rating: 3
+        }
+      ]
+    }
+  ]
 
   const album = new Album();
   const albumsView = new AlbumsView(container);

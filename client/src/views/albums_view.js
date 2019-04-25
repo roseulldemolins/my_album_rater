@@ -1,4 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
+const Album = require('../models/albums.js');
 
 class AlbumsView{
 
@@ -57,8 +58,9 @@ class AlbumsView{
 
 
       const rating = document.createElement('div');
+      const average = new Album();
       rating.classList.add("ui", "star", "rating");
-      rating.dataset.rating = 3;
+      rating.dataset.rating = Math.floor(average.getAverage(album.tracks));
 
 
 
