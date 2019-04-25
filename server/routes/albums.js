@@ -13,7 +13,7 @@ router.get('/albums', function(req, res, next) {
 
 /* GET all albums and their tracks */
 router.get('/', function(req, res, next) {
-  SqlRunner.run("SELECT albums.title AS album_title, tracks.title AS track_title FROM albums INNER JOIN tracks ON tracks.album_id = albums.id")
+  SqlRunner.run("SELECT * FROM albums * FROM tracks INNER JOIN tracks ON tracks.album_id = albums.id")
   .then((result) => {
     res.status(200).json(result.rows);
   });
