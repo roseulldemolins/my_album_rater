@@ -46,6 +46,14 @@ class Album {
       });
   }
 
+  getAverage(array) {
+    total = 0;
+    array.forEach((element) => {
+      total += element.rating;
+    })
+    return total / array.length;
+  }
+
 }
 
 module.exports = Album;
