@@ -4,20 +4,23 @@ class AddAlbum {
 
   constructor(element) {
     this.element = element;
+    this.hide = document.querySelector('.add-form')
   }
 
   bindEvents() {
     this.element.addEventListener('submit', (evt) => {
       evt.preventDefault();
       const newEntry = {};
-      newEntry.style = evt.target.style.value;
-      newEntry.distance = evt.target.distance.value;
-      newEntry.worldrecord = evt.target.record.value;
+      newEntry.title = evt.target.title.value;
+      newEntry.artist = evt.target.artist.value;
+      newEntry.year = evt.target.year.value;
+      newEntry.genre = evt.target.genre.value;
 
-      const newTime = new SwimTimes();
-      newTime.postData(newEntry);
+      const newAlbum = new Album();
+      newAlbum.postData(newEntry);
 
       this.element.reset();
+      this.hide.style.visibility = 'hidden';
     })
 
   }

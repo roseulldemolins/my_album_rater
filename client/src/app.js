@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const addAlbum = new AddAlbum(addForm);
   const button = new AlbumButton();
 
+  addAlbum.bindEvents();
+
   button.revealButton();
 
   albumsView.render(object);
