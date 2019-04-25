@@ -4,16 +4,38 @@ var SqlRunner = require('../db/sql_runner');
 const organiser = require('../models/track_organiser')
 
 
-/* GET all albums. */
-router.get('/', function(req, res, next) {
-  SqlRunner.run("SELECT * FROM albums ORDER BY title ASC")
-  .then((result) => {
-    res.status(200).json(result.rows);
+/* GET all albums and their tracks. */
+router.get('/all', function(req, res, next) {
+  SqlRunner.run(`SELECT * FROM albums`)
+  .then((albums)=>{
+    SqlRunner.run(`SELECT * FROM tracks`)
+    .then((tracks)=>{
+      const albumList = albums.rows;
+      const trackList = tracks.rows;
+
+      albumList.forEach((album)=>{
+        album.tracks=[];
+        trackList.forEach((track)=>{
+          if(track.album_id==album.id){
+            album.tracks.push(track)
+          };
+        });
+      });
+      res.status(200).json(albumList);
+    });
   });
 });
 
+/* GET all albums. */
+router.get('/', function(req, res, next) {
+  SqlRunner.run("SELECT * FROM albums")
+  .then((result)=>{
+    res.status(200).json(result.rows);
+  })
+});
+
 /* GET all albums and their tracks */
-router.get('/all', function(req, res, next) {
+router.get('/test', function(req, res, next) {
   SqlRunner.run("SELECT * FROM albums INNER JOIN tracks ON tracks.album_id = albums.id")
   .then((result) => {
     // TODO: extract to model
@@ -23,13 +45,7 @@ router.get('/all', function(req, res, next) {
   });
 });
 
-/* GET all albums and their tracks */
-router.get('/test', function(req, res, next) {
-  SqlRunner.run("SELECT albums.title AS [album.title], albums.artist as [album.atrist], tracks.title as [albums.tracks.title], tracks.track_number as [albums.tracks.trackNumber] INNER JOIN tracks ON tracks.album_id = albums.id")
-  .then((result) => {
-    res.status(200).json(result.rows);
-  });
-});
+
 
 
 // DELETE an album
