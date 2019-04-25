@@ -6,9 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "webpack -w",
-    "start": "node ./bin/www",
-    "server:dev": "nodemon ./bin/www",
-    "start": "node server.js"
+    "start": "node server.js",
+    "server:dev": "nodemon ./bin/www"
   },
   "keywords": [],
   "author": "",
