@@ -4,7 +4,8 @@ const AddAlbum = require('./views/add_album_view.js');
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("JavaScript Loaded");
-  const container = document.querySelector('#albums-container')
+  const container = document.querySelector('#albums-container');
+  const addForm = document.querySelector('#add-form');
 
   const object = [{
     title: 'Origin of Symmetry',
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const album = new Album();
   const albumsView = new AlbumsView(container);
-  const addAlbum = new AddAlbum();
+  const addAlbum = new AddAlbum(addForm);
 
   albumsView.render(object);
 
