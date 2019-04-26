@@ -54,7 +54,7 @@ router.delete('/:id', function(req, res) {
 
 // CREATE a new album
 router.post('/', function(req, res){
-  SqlRunner.run('INSERT INTO movies (album_title, artist, year, genre, lable) VALUES ($1, $2, $3, $4, $5)', [req.body.album_title, req.body.artist, req.body.year,req.body.genre,req.body.lable])
+  SqlRunner.run('INSERT INTO albums (album_title, artist, year, genre, lable) VALUES ($1, $2, $3, $4, $5)', [req.body.album_title, req.body.artist, req.body.year,req.body.genre,req.body.lable])
   .then((result) => {
     res.status(201).json(result);
   });

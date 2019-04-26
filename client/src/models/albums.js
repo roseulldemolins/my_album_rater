@@ -20,6 +20,7 @@ class Album {
   }
 
   postData(entry) {
+    console.log('new db entry added');
     const url = 'http://localhost:3000/albums';
     const request = new RequestHelper(url);
     request.post(entry)
