@@ -20,6 +20,10 @@
 }
 
 body{
-  background-color: #eaf1fc;
+  background-color: #333333;
   text-align: center
+}
+
+h1{
+  color: white;
 }
