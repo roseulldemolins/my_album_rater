@@ -3,7 +3,6 @@ var router = express.Router();
 var SqlRunner = require('../db/sql_runner');
 const organiser = require('../models/track_organiser')
 
-
 /* GET all albums and their tracks. */
 router.get('/all', function(req, res, next) {
   SqlRunner.run(`SELECT * FROM albums`)
@@ -45,9 +44,6 @@ router.get('/test', function(req, res, next) {
   });
 });
 
-
-
-
 // DELETE an album
 router.delete('/:id', function(req, res) {
   SqlRunner.run('DELETE FROM albums WHERE id = $1', [req.params.id])
@@ -56,8 +52,12 @@ router.delete('/:id', function(req, res) {
     });
 });
 
-
-
-
+// CREATE a new album
+router.post('/', function(req, res){
+  SqlRunner.run('INSERT INTO movies (album_title, artist, year, genre, lable) VALUES ($1, $2, $3, $4, $5)', [req.body.album_title, req.body.artist, req.body.year,req.body.genre,req.body.lable])
+  .then((result) => {
+    res.status(201).json(result);
+  });
+});
 
 module.exports = router;
