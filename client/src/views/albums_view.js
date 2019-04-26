@@ -60,61 +60,25 @@ class AlbumsView{
       const rating = document.createElement('div');
       const average = new Album();
       rating.classList.add("ui", "star", "rating");
-      console.log(album);
       rating.dataset.rating = Math.floor(average.getAverage(album.tracks));
       rating.innerHTML = `${rating.dataset.rating} out of 5 baby!`;
 
       const tracks = document.createElement('div');
       if (album.tracks.length > 0){
-        tracks.innerHTML = album.tracks[0].track_title
+        album.tracks.forEach((track) => {
+          const trackName = document.createElement('div');
+          trackName.innerHTML = `${track.track_number}: ${track.track_title}`
+          tracks.appendChild(trackName);
+        });
       };
 
 
-
-
-
-
-
-
-      // const buttons = document.createElement('div');
-      // button.classList.add("ui", "basic", "red", "btn-group");
-      // button.innerHTML = "Delete";
-      // button.classList.add("ui", "basic", "blue", "btn-group");
-      // button.innerHTML = "Update";
-
-
-      // const deleteButton = document.createElement('button');
-      // deleteButton.classList.add("ui", "basic", "red", "button",);
-      // deleteButton.value = flower.id;
-      // deleteButton.innerHTML = "Delete";
-      // deleteButton.addEventListener('click', (event) => {
-      //   console.log(event.target.value);
-      //
-      // });
-      //
-      //
-      // const updateButton = document.createElement("div", "button");
-      // updateButton.classList.add("ui", "basic", "blue", "button");
-      // // updateButton.id = `update ${flower.id}`;
-      // updateButton.innerHTML = "Update";
-      //
-      //
-      //
-      //
       content.appendChild(header);
       content.appendChild(meta);
       card.appendChild(content);
       content.appendChild(rating);
       content.appendChild(tracks);
-      //
-      // buttons.appendChild(deleteButton);
-      // buttons.appendChild(updateButton);
-      // card.appendChild(buttons);
 
-
-
-
-      console.log(card);
       return card;
     }
 

@@ -33,49 +33,34 @@ INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Electric Ladyland', 'Jimi Hendrix', 1968, 'Rock', 'Track', null);
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Heavy Weather', 'Weather Report', 1977, 'Jazz', 'Columbia', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Djangology', 'Django Reinhardt', 1961, 'Jazz', 'RCA', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Led Zeppelin', 'Led Zeppelin', 1969, 'Rock', 'Atlantic', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Led Zeppelin II', 'Led Zeppelin', 1969, 'Rock', 'Atlantic', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Led Zeppelin III', 'Led Zeppelin', 1970, 'Rock', 'Atlantic', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Led Zeppelin IV', 'Led Zeppelin', 1971, 'Rock', 'Atlantic', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Bookends', 'Simon & Garfunkel', 1968, 'Folk', 'Columbia', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Bridge Over Troubled Water', 'Simon & Garfunkel', 1970, 'Folk', 'Columbia', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Highway 61 Revisited', 'Bob Dylan', 1967, 'Folk', 'Columbia', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Blonde On Blonde', 'Bob Dylan', 1966, 'Folk', 'Columbia', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Bert Jansch', 'Bert Jansch', 1965, 'Folk', 'Transatlantic', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Folk, Blues & Beyond...', 'Davy Graham', 1964, 'Folk', 'Decca', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('The Guitar Player', 'Davy Graham', 1961, 'Folk', 'Pye', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('Curlew River', 'Benjamin Britten', 1965, 'Opera', 'Decca', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('The Burning Fiery Furnace', 'Benjamin Britten', 1967, 'Opera', 'Decca', null);
-INSERT INTO albums (title, artist, year, genre, label, cover)
 INSERT INTO albums (album_title, artist, year, genre, label, cover)
   VALUES ('The Prodigal Son', 'Benjamin Britten', 1970, 'Opera', 'Decca', null);
 
