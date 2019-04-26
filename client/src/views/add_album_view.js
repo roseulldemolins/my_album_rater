@@ -15,8 +15,11 @@ class AddAlbum {
       newEntry.artist = evt.target.artist.value;
       newEntry.year = evt.target.year.value;
       newEntry.genre = evt.target.genre.value;
+      newEntry.label = evt.target.label.value;
 
+      console.log(newEntry);
       const newAlbum = new Album();
+      console.log(newAlbum);
       newAlbum.postData(newEntry);
 
       this.element.reset();
